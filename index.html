@@ -156,21 +156,21 @@ function shade(h,a){const n=parseInt(h.slice(1),16),t=a<0?0:255,k=Math.abs(a);co
 // ───────── 스테이지 (싱글) ─────────
 const STAGES=[
  {no:1,name:'알바생 민수',emoji:'🥱',desc:'퍽 줍는 것도 귀찮은 주말 알바. 반응이 굼뜨고 헛손질이 잦다.',gim:null,gimTxt:'기본 룰 · 넓은 골대',col:'#1fb8d6',goal:180,maxPuck:19,fric:.994,
-  ai:{spd:5.06,react:.24,err:44,aggr:.3,bounce:0,predict:0,bank:0,feint:0}},
+  ai:{spd:4.8,react:0.26,err:48,aggr:0.3,bounce:0,predict:0,bank:0,feint:0}},
  {no:2,name:'동네 초딩 지훈',emoji:'😤',desc:'용돈 전부를 이 테이블에 바친 초등학생. 손이 꽤 빨라졌다.',gim:null,gimTxt:'골대 조금 좁아짐',col:'#2fbf6b',goal:168,maxPuck:20,fric:.994,
-  ai:{spd:6.16,react:.19,err:32,aggr:.45,bounce:0,predict:0,bank:0,feint:0}},
+  ai:{spd:5.6,react:0.22,err:38,aggr:0.4,bounce:0,predict:0,bank:0,feint:0}},
  {no:3,name:'수학여행 고딩 세라',emoji:'😎',desc:'벽에 튕긴 퍽까지 계산한다. 뱅크샷 한 방으로는 안 뚫린다.',gim:null,gimTxt:'AI가 벽 반사를 예측',col:'#8a5cff',goal:160,maxPuck:21,fric:.994,
-  ai:{spd:7.04,react:.15,err:24,aggr:.55,bounce:1,predict:0,bank:0,feint:0}},
+  ai:{spd:6.2,react:0.19,err:32,aggr:0.5,bounce:1,predict:0,bank:0,feint:0}},
  {no:4,name:'오락실 사장님',emoji:'🧔',desc:'자기 가게 테이블에 범퍼를 박아놨다. 튕기는 각은 이미 다 외웠다.',gim:'bumper',gimTxt:'센터라인 범퍼 2개',col:'#ff8a1f',goal:160,maxPuck:22,fric:.994,
-  ai:{spd:7.7,react:.13,err:20,aggr:.6,bounce:1,predict:1,bank:0,feint:0}},
- {no:5,name:'빙판의 여왕',emoji:'❄️',desc:'에어를 최대로 올렸다. 퍽이 좀처럼 멈추지 않는다.',gim:'ice',gimTxt:'마찰 거의 없음 · 퍽 최고속 상승',col:'#48b7ff',goal:150,maxPuck:25,fric:.9988,
-  ai:{spd:8.14,react:.12,err:18,aggr:.6,bounce:1,predict:1,bank:0,feint:0}},
+  ai:{spd:6.6,react:0.17,err:28,aggr:0.55,bounce:1,predict:1,bank:0,feint:0}},
+ {no:5,name:'빙판의 여왕',emoji:'❄️',desc:'에어를 최대로 올렸다. 퍽이 좀처럼 멈추지 않는다.',gim:'ice',gimTxt:'마찰 거의 없음 · 퍽 최고속 상승',col:'#48b7ff',goal:158,maxPuck:23,fric:.9988,
+  ai:{spd:7,react:0.16,err:26,aggr:0.55,bounce:1,predict:1,bank:0,feint:0}},
  {no:6,name:'쌍둥이 형제',emoji:'👯',desc:'퍽 하나로는 심심하다며 하나를 더 올렸다.',gim:'double',gimTxt:'퍽 2개 동시 진행',col:'#e8b400',goal:160,maxPuck:22,fric:.994,
-  ai:{spd:8.8,react:.11,err:18,aggr:.5,bounce:1,predict:1,bank:0,feint:0}},
- {no:7,name:'댄서 준호',emoji:'🕺',desc:'골대가 좌우로 춤춘다. 각도에 타이밍까지 맞춰야 들어간다.',gim:'moving',gimTxt:'골대 좌우 이동 · AI 뱅크샷',col:'#ff4fb8',goal:150,maxPuck:24,fric:.994,
-  ai:{spd:9.46,react:.09,err:14,aggr:.65,bounce:1,predict:1,bank:1,feint:0}},
- {no:8,name:'전설의 고인물 김씨',emoji:'👴',desc:'1998년부터 이 자리를 지켰다. 뱅크샷, 페이크, 좁은 골대.',gim:'legend',gimTxt:'뱅크샷 · 페이크 · 좁은 골대',col:'#e0282e',goal:130,maxPuck:27,fric:.995,
-  ai:{spd:11,react:.06,err:8,aggr:.8,bounce:1,predict:1,bank:1,feint:.35}}
+  ai:{spd:7.2,react:0.15,err:26,aggr:0.45,bounce:1,predict:1,bank:0,feint:0}},
+ {no:7,name:'댄서 준호',emoji:'🕺',desc:'골대가 좌우로 춤춘다. 각도에 타이밍까지 맞춰야 들어간다.',gim:'moving',gimTxt:'골대 좌우 이동 · AI 뱅크샷',col:'#ff4fb8',goal:158,maxPuck:23,fric:.994,
+  ai:{spd:7.8,react:0.13,err:22,aggr:0.6,bounce:1,predict:1,bank:1,feint:0}},
+ {no:8,name:'전설의 고인물 김씨',emoji:'👴',desc:'1998년부터 이 자리를 지켰다. 뱅크샷, 페이크, 좁은 골대.',gim:'legend',gimTxt:'뱅크샷 · 페이크 · 좁은 골대',col:'#e0282e',goal:142,maxPuck:25,fric:.995,
+  ai:{spd:9,react:0.1,err:16,aggr:0.7,bounce:1,predict:1,bank:1,feint:0.25}}
 ];
 // ───────── 1:1 대결 테이블 ─────────
 const VS_RULES=[
@@ -391,7 +391,7 @@ function perceive(p){
 function updateAI(f,dt){
   const P=st.ai,live=pucks.filter(p=>!p.dead);if(!live.length)return;
   const diff=score.ai-score.me;
-  const errMul=1+Math.max(0,diff-1)*.3-Math.max(0,-diff-1)*.12,spdMul=1-Math.max(0,diff-1)*.06;
+  const errMul=1+Math.max(0,diff)*.3-Math.max(0,-diff-1)*.1,spdMul=1-Math.max(0,diff)*.07;
   ai.decT-=dt;if(ai.decT<=0){ai.decT=.35+Math.random()*.35;ai.err=(Math.random()*2-1)*P.err*errMul;}
   let o=null,bt=1e9;
   for(const p of live){const q=perceive(p);let t=q.y<TH/2?0:(q.vy<-.5?(q.y-TH/2)/-q.vy:1e6);t+=q.y/100;if(t<bt){bt=t;o=q;}}
